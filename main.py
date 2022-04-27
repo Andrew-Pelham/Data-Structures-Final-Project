@@ -3,7 +3,9 @@
 #Imports
 
 import sys
-from datetime import datetime
+#import pandas as pd
+#from datetime import datetime
+#import matplotlib.pyplot as plt
 
 #Constants
 
@@ -11,21 +13,45 @@ from datetime import datetime
 
 #Functions
 
+def buildData():
+	'''Build dataset from csv file, return to main'''
 
+
+
+def buildGraphs(day, year, weather, covid):
+	'''Select which graphs to display using given flags and call respective functions'''
+
+	print("hello")
+	print(day)
+	print(year)
+	print(weather)
+	print(covid)
 
 #Main
 
 def main():
 	'''parse flags, and print appropriate data requested'''
 
-	flags = sys.argv[1:]
+#	dict data = buildData()
 
-	date = #enter day of week
+	print("hello")
+
+	flags = sys.argv[1:]
+	day = False
+	year = False
 	weather = False
+	covid = False
+	
 
 	while len(flags):
 		flag = flags.pop(0)
 		if flag == '-d':
-			date = flags.pop(0)
+			day = True
+		if flag == '-y':
+			year = True
 		if flag == '-w':
 			weather = True
+		if flag == '-c':
+			covid = True
+
+	buildGraphs(day, year, weather, covid) 
