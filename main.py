@@ -18,14 +18,10 @@ def buildData():
 
 
 
-def buildGraphs(day, year, weather, covid):
+def buildGraphs(data, day, year, weather, covid):
 	'''Select which graphs to display using given flags and call respective functions'''
 
-	print("hello")
-	print(day)
-	print(year)
-	print(weather)
-	print(covid)
+
 
 #Main
 
@@ -33,8 +29,6 @@ def main():
 	'''parse flags, and print appropriate data requested'''
 
 #	dict data = buildData()
-
-	print("hello")
 
 	flags = sys.argv[1:]
 	day = False
@@ -54,4 +48,7 @@ def main():
 		if flag == '-c':
 			covid = True
 
-	buildGraphs(day, year, weather, covid) 
+	buildGraphs(None, day, year, weather, covid)
+
+if __name__ == '__main__':
+	    main()
